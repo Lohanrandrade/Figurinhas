@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anton", sans-serif;
+  
+  --color-soccer-green: #16a34a; /* Matches green-600 */
+  --color-soccer-yellow: #fedd00; /* Precise yellow from theme */
+  --color-soccer-black: #000000;
+  --color-soccer-white: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply bg-soccer-black text-soccer-white antialiased overflow-x-hidden;
+  }
+}
+
+.bg-vibrant-grid {
+  background-image: radial-gradient(circle, rgba(254, 221, 0, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.bg-stadium-gradient {
+  background: radial-gradient(circle at center, rgba(22, 163, 74, 0.15) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.text-stroke-yellow {
+  -webkit-text-stroke: 1px var(--color-soccer-yellow);
+}
+
+.gold-glow {
+  box-shadow: 0 0 30px rgba(254, 221, 0, 0.3);
+}
+
+.green-glow {
+  box-shadow: 0 0 10px #22c55e;
+}
+
+.skew-label {
+  transform: skewX(-12deg);
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.text-stroke-yellow {
+  -webkit-text-stroke: 1px var(--color-soccer-yellow);
+  color: transparent;
+}
+
+@layer utilities {
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+}
+
