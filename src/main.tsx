@@ -21,7 +21,7 @@ import './index.css';
   s.parentNode!.insertBefore(t, s);
 })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
-(window as any).fbq('init', '768943895896997');
+(window as any).fbq('init', '1306854861409280');
 (window as any).fbq('track', 'PageView');
 
 createRoot(document.getElementById('root')!).render(
